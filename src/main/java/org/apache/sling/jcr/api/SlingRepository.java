@@ -66,10 +66,13 @@ public interface SlingRepository extends Repository {
      * {@link #login(javax.jcr.Credentials, String)} or
      * {@link Session#impersonate(javax.jcr.Credentials)} must be used.</i></b>
      * <p>
-     * This method is deprecated. Services running in the Sling system should
+     * Use of this method is not recommended except in very well-defined
+     * scenarios. Services running in the Sling system should
      * use the {@link #loginService(String serviceInfo, String workspace)}
      * method instead. Implementations of this method must throw
      * {@code javax.jcr.LoginException} if they don't support it.
+     * <p>This method was deprecated as of 2.2 but the deprecation was removed
+     * in 2.4.2 as there is no perfect replacement.
      *
      * @param workspace The name of the workspace to which to get an
      *            administrative session. If <code>null</code> the
@@ -79,11 +82,7 @@ public interface SlingRepository extends Repository {
      *             the implementation.
      * @throws RepositoryException If an error occurs creating the
      *             administrative session
-     * @deprecated as of 2.2 (bundle version 2.2.0) because of inherent security
-     *             issues. Services requiring specific permissions should use
-     *             the {@link #loginService(String, String)} instead.
-     */
-    @Deprecated
+    */
     @Nonnull Session loginAdministrative(String workspace) throws LoginException, RepositoryException;
 
     /**

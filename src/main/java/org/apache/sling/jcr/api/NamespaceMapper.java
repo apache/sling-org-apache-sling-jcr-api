@@ -18,10 +18,10 @@
  */
 package org.apache.sling.jcr.api;
 
-import javax.annotation.Nonnull;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
+import org.jetbrains.annotations.NotNull;
 import org.osgi.annotation.versioning.ConsumerType;
 
 /**
@@ -40,5 +40,5 @@ public interface NamespaceMapper {
      * @param session The new session
      * @throws RepositoryException If anything goes wrong
      */
-    void defineNamespacePrefixes(@Nonnull Session session) throws RepositoryException;
+    void defineNamespacePrefixes(@NotNull Session session) throws RepositoryException;
 }

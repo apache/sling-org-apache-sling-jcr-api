@@ -54,7 +54,8 @@ public interface SlingRepository extends Repository {
      *
      * @return null if the configured default workspace name is empty, SLING-256
      */
-    @Nullable String getDefaultWorkspace();
+    @Nullable
+    String getDefaultWorkspace();
 
     /**
      * Returns a session to the given workspace which has administrative powers.
@@ -84,7 +85,8 @@ public interface SlingRepository extends Repository {
      *             the {@link #loginService(String, String)} instead.
      */
     @Deprecated
-    @NotNull Session loginAdministrative(String workspace) throws LoginException, RepositoryException;
+    @NotNull
+    Session loginAdministrative(String workspace) throws LoginException, RepositoryException;
 
     /**
      * Returns a session to the given workspace with privileges assigned to the
@@ -107,7 +109,8 @@ public interface SlingRepository extends Repository {
      *      href="http://sling.apache.org/documentation/the-sling-engine/service-authentication.html">Service
      *      Authentication</a>
      */
-    @NotNull Session loginService(String subServiceName, String workspace) throws LoginException, RepositoryException;
+    @NotNull
+    Session loginService(String subServiceName, String workspace) throws LoginException, RepositoryException;
 
     /**
      * Impersonates the service session provided by the calling bundle (and further
@@ -137,5 +140,7 @@ public interface SlingRepository extends Repository {
      * @throws RepositoryException If another error occurs.
      * @since 2.3
      */
-    @NotNull Session impersonateFromService(String subServiceName, @NotNull Credentials credentials, String workspaceName) throws LoginException, RepositoryException;
+    @NotNull
+    Session impersonateFromService(String subServiceName, @NotNull Credentials credentials, String workspaceName)
+            throws LoginException, RepositoryException;
 }

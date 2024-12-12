@@ -21,4 +21,3 @@
 package org.apache.sling.jcr.api;
 
 import org.osgi.annotation.versioning.Version;
-

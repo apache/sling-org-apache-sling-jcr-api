@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
@@ -31,17 +31,15 @@
     <version>2.4.1-SNAPSHOT</version>
 
     <name>Apache Sling JCR API</name>
-    <description>
-        This OSGi bundle provides the JCR packages as
+    <description>This OSGi bundle provides the JCR packages as
         well as a helper service interface to be implemented and
-        provided by repository providers.
-    </description>
+        provided by repository providers.</description>
 
     <scm>
         <connection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-jcr-api.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-jcr-api.git</developerConnection>
-        <url>https://github.com/apache/sling-org-apache-sling-jcr-api.git</url>
         <tag>HEAD</tag>
+        <url>https://github.com/apache/sling-org-apache-sling-jcr-api.git</url>
     </scm>
 
     <properties>

@@ -44,5 +44,4 @@ public class TooManySessionsException extends LoginException {
     public TooManySessionsException(String message, Throwable t) {
         super(message, t);
     }
-
 }
